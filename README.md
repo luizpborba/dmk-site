@@ -46,12 +46,12 @@ const CONTACT_EMAIL = 'contato@dmkmarketing.com.br';
 Em qualquer caso o visitante vê o painel de confirmação sem sair da página.
 
 ### O que o formulário coleta
-Três blocos: **Sobre você** (nome, cargo, e-mail, telefone), **Sobre a empresa**
-(segmento, Instagram, quem cuida do marketing hoje) e **O que você precisa** (serviços em
-chips de múltipla escolha, maior dificuldade, investimento previsto, prazo e mensagem
-livre). Fecha com autorização de contato (LGPD), campo-armadilha contra robô e validação
-nativa do navegador. No celular tudo vira coluna única, com campo de 16px para o iPhone
-não dar zoom ao focar.
+Oito campos em grade de duas colunas, sem blocos nem listas: nome, e-mail, telefone e
+Instagram (obrigatórios), segmento, interesse, investimento previsto e um campo aberto.
+Fecha com autorização de contato (LGPD), campo-armadilha contra robô e validação nativa
+do navegador. No celular a grade continua, só que telefone e Instagram dividem a linha e
+os campos de rótulo longo ocupam a linha inteira; o campo tem 16px para o iPhone não dar
+zoom ao focar.
 
 ## 2. Outros ajustes recomendados
 
@@ -125,10 +125,11 @@ faixa de serviços em rolagem contínua (pausa no hover). Tudo desliga com
   seta ao lado do título.
 - Até 900px: **logo centralizada e botão de menu à direita**, barra branca sólida, menu em
   tela cheia enxuto (itens de 1,15rem, seta discreta, botão dourado de largura total).
-- Até 700px: tudo em coluna única, tipografia reduzida, blocos de apoio marcados com
+- Até 700px: tipografia reduzida, formulário em grade adaptada, blocos de apoio marcados com
   `hide-sm` saem de cena para o celular ficar com menos texto, perguntas do FAQ menores
   com o sinal alinhado à primeira linha, e o formulário com campo de 16px, rótulo curto e
-  asterisco dourado no lugar da palavra "obrigatório".
+  asterisco dourado no lugar da palavra "obrigatório". O rodapé vira grade de dois por
+  quatro em vez de listas empilhadas.
 - A imagem do painel troca de arquivo no celular (`mockup-mobile.jpg`), um recorte mais
   fechado para a interface continuar legível em vez de achatar.
 - Verificado a 360, 375, 390, 768 e ~1010px: sem rolagem horizontal, sem elemento cortado

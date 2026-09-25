@@ -314,19 +314,12 @@ ul{margin:0;padding:0;list-style:none}
 .form__head p{font-size:.85rem;color:var(--inv-gray);margin-top:6px}
 .form__step{font-size:.66rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--inv-gold);border:1px solid var(--inv-line);padding:8px 14px;border-radius:999px;white-space:nowrap}
 .form__body{padding:clamp(24px,3vw,40px)}
-fieldset{border:0;padding:0;margin:0 0 30px}
-fieldset:last-of-type{margin-bottom:22px}
-legend{
-  font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--inv-gold);
-  padding:0 0 18px;display:flex;align-items:center;gap:12px;width:100%;
-}
-legend::after{content:"";height:1px;background:var(--inv-line);flex:1}
 .field__label{font-size:.72rem;font-weight:500;color:var(--inv-gray);letter-spacing:.02em}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.frow--3{grid-template-columns:1fr 1fr 1fr}
-.field{display:grid;gap:7px;margin-bottom:16px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:7px}
+.field--full{grid-column:1 / -1}
 .field label{font-size:.72rem;font-weight:500;color:var(--inv-gray);letter-spacing:.02em}
-.field label em{font-style:normal;color:var(--inv-gold)}
+.field label em{font-style:normal;color:var(--inv-gold);margin-left:2px}
 .field input,.field select,.field textarea{
   background:var(--inv-field);border:1px solid var(--inv-line);border-radius:3px;
   padding:13px 14px;outline:none;width:100%;font-size:.95rem;
@@ -335,24 +328,10 @@ legend::after{content:"";height:1px;background:var(--inv-line);flex:1}
 .field input::placeholder,.field textarea::placeholder{color:color-mix(in srgb,var(--inv-ink) 32%,transparent)}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--inv-gold);background:rgba(217,180,92,.07)}
 .field input:user-invalid,.field textarea:user-invalid{border-color:#E0655A}
-.field label em{font-style:normal;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--inv-gold);margin-left:6px}
-.field textarea{min-height:96px;resize:vertical}
+.field textarea{min-height:92px;resize:vertical}
 .field select{appearance:none;cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,var(--inv-gold) 50%),linear-gradient(135deg,var(--inv-gold) 50%,transparent 50%);background-position:calc(100% - 20px) 22px,calc(100% - 15px) 22px;background-size:5px 5px;background-repeat:no-repeat}
 .field select option{background:#17171a;color:var(--inv-ink)}
-
-/* chips de interesse */
-.chips{display:flex;flex-wrap:wrap;gap:9px}
-.chip{position:relative}
-.chip input{position:absolute;opacity:0;width:0;height:0}
-.chip span{
-  display:block;padding:10px 16px;border:1px solid var(--inv-line);border-radius:999px;
-  font-size:.82rem;cursor:pointer;color:var(--inv-gray);transition:.3s var(--ease);user-select:none;
-}
-.chip span:hover{border-color:var(--inv-line-2);color:var(--inv-ink)}
-.chip input:checked + span{border-color:var(--inv-gold);color:var(--inv-gold);background:rgba(217,180,92,.1)}
-.chip input:focus-visible + span{outline:2px solid var(--inv-gold);outline-offset:2px}
-
-.consent{display:grid;grid-template-columns:20px 1fr;gap:12px;align-items:start;margin:4px 0 22px;font-size:.8rem;color:var(--inv-gray);line-height:1.5}
+.consent{display:grid;grid-template-columns:20px 1fr;gap:12px;align-items:start;margin:22px 0;font-size:.8rem;color:var(--inv-gray);line-height:1.5}
 .consent input{appearance:none;width:20px;height:20px;border:1px solid var(--inv-line-2);border-radius:3px;background:var(--inv-field);cursor:pointer;transition:.25s;position:relative;margin:2px 0 0}
 .consent input:checked{background:var(--inv-gold);border-color:var(--inv-gold)}
 .consent input:checked::after{content:"";position:absolute;left:6px;top:2px;width:5px;height:10px;border-width:0 2px 2px 0;border-style:solid;border-color:#171103;transform:rotate(45deg)}
@@ -365,15 +344,16 @@ legend::after{content:"";height:1px;background:var(--inv-line);flex:1}
 .form__done i{font-style:normal;width:52px;height:52px;border-radius:50%;border:1px solid var(--inv-gold);color:var(--inv-gold);display:grid;place-items:center;font-size:1.3rem}
 
 /* ---------- RODAPÉ ---------- */
-.foot{background:var(--paper);border-top:1px solid var(--line);padding-block:clamp(48px,6vw,88px) 30px}
-.foot__top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:var(--gutter)}
-.foot .logo{width:clamp(110px,12vw,150px);margin-bottom:22px}
-.foot p{color:var(--gray);font-size:.92rem;max-width:38ch}
-.foot h5{font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-2);margin:0 0 20px}
-.foot ul{display:grid;gap:12px}
-.foot ul a,.foot ul span{font-size:.92rem;color:var(--gray);transition:color .3s}
-.foot ul a:hover{color:var(--gold-ink)}
-.foot__bar{margin-top:clamp(40px,5vw,70px);padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-2)}
+.foot{background:var(--paper);border-top:1px solid var(--line);padding-block:clamp(40px,4.6vw,64px) 22px}
+.foot__top{display:grid;grid-template-columns:1.05fr 1.5fr auto;gap:clamp(24px,4vw,56px);align-items:start}
+.foot__brand .logo{width:clamp(104px,11vw,132px);margin-bottom:16px}
+.foot__brand p{color:var(--gray);font-size:.88rem;max-width:30ch}
+.foot__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px clamp(14px,2vw,28px);padding-top:6px}
+.foot__grid a{font-size:.88rem;color:var(--gray);transition:color .3s;white-space:nowrap}
+.foot__grid a:hover{color:var(--gold-ink)}
+.foot__meta{display:grid;gap:8px;justify-items:end;text-align:right;font-size:.86rem;color:var(--gray);padding-top:6px}
+.foot__meta .link{font-size:.86rem;font-weight:500}
+.foot__bar{margin-top:clamp(28px,3.4vw,44px);padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-2)}
 
 /* ---------- reveal ---------- */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease-out),transform .9s var(--ease-out)}
@@ -412,7 +392,9 @@ legend::after{content:"";height:1px;background:var(--inv-line);flex:1}
   .drawer__foot{margin-top:20px;font-size:.78rem}
 
   .hero{padding-top:84px}
-  .hero__grid,.detail,.about,.shead,.foot__top,.values{grid-template-columns:1fr}
+  .hero__grid,.detail,.about,.shead,.values{grid-template-columns:1fr}
+  .foot__top{grid-template-columns:1fr 1fr;gap:28px}
+  .foot__meta{justify-items:start;text-align:left;grid-column:1 / -1;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
   .detail--flip .detail__fig{order:0}
   .hero__stage{min-height:0;margin-top:30px}
   .stage__photo{max-height:min(66vh,480px)}
@@ -434,7 +416,7 @@ legend::after{content:"";height:1px;background:var(--inv-line);flex:1}
   .h2{font-size:clamp(1.75rem,1.2rem + 3.4vw,2.4rem)}
   .display{font-size:clamp(2.2rem,1.4rem + 5.4vw,3.2rem)}
 
-  .steps,.frow,.frow--3{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
   .svc__row{grid-template-columns:1fr;align-items:start;gap:8px;padding-block:24px}
   .svc__go{display:none}
   .svc__t{font-size:1.45rem}
@@ -468,20 +450,20 @@ legend::after{content:"";height:1px;background:var(--inv-line);flex:1}
   .faq p{font-size:.92rem;padding-bottom:18px}
 
   /* formulário: campo largo, toque confortável, sem texto sobrando */
-  .form__head{flex-direction:column;gap:6px;padding:22px 20px}
+  .form__head{flex-direction:column;gap:6px;padding:20px}
+  .foot__top{grid-template-columns:1fr;gap:24px}
+  .foot__grid{grid-template-columns:1fr 1fr;gap:10px 16px}
   .form__head h3{font-size:1.15rem}
   .form__step{display:none}
   .form__body{padding:22px 20px 26px}
-  fieldset{margin-bottom:24px}
-  legend{font-size:.64rem;padding-bottom:14px;gap:10px}
-  .field{gap:6px;margin-bottom:14px}
+    .fgrid{gap:14px}
+  .field{gap:6px}
+  .field--sm-full{grid-column:1 / -1}   /* rótulo longo precisa da linha inteira */
   .field label{font-size:.76rem}
   .field label em{font-size:.76rem;letter-spacing:0;margin-left:3px}
   .field input,.field select,.field textarea{font-size:16px;padding:13px 14px}
   .field select{background-position:calc(100% - 18px) 23px,calc(100% - 13px) 23px}
   .field textarea{min-height:88px}
-  .chips{gap:7px}
-  .chip span{padding:9px 13px;font-size:.78rem}
   .consent{font-size:.78rem;gap:10px;margin-bottom:18px}
   .btn--block{padding:16px 22px}
   .form__note{font-size:.7rem}

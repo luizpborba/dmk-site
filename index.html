@@ -377,82 +377,57 @@
       <div class="form__body">
         <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-        <fieldset>
-          <legend>Sobre você</legend>
-          <div class="frow">
-            <div class="field"><label for="nome">Nome completo <em>*</em></label><input id="nome" name="nome" required autocomplete="name" placeholder="Seu nome"></div>
-            <div class="field"><label for="cargo">Cargo na empresa</label><input id="cargo" name="cargo" autocomplete="organization-title" placeholder="Sócio, gestor, responsável"></div>
+        <div class="fgrid">
+          <div class="field field--full">
+            <label for="nome">Nome completo <em>*</em></label>
+            <input id="nome" name="nome" required autocomplete="name" placeholder="Seu nome">
           </div>
-          <div class="frow">
-            <div class="field"><label for="email">E-mail <em>*</em></label><input id="email" name="email" type="email" required autocomplete="email" placeholder="voce@empresa.com"></div>
-            <div class="field"><label for="fone">Telefone <em>*</em></label><input id="fone" name="fone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000"></div>
+          <div class="field field--full">
+            <label for="email">E-mail <em>*</em></label>
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder="voce@empresa.com">
           </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>Sobre a empresa</legend>
-          <div class="frow">
-            <div class="field"><label for="segmento">Segmento <em>*</em></label><input id="segmento" name="segmento" required placeholder="O que você vende"></div>
-            <div class="field"><label for="instagram">Instagram <em>*</em></label><input id="instagram" name="instagram" required placeholder="@suaempresa"></div>
-          </div>
-          <div class="field"><label for="hoje">Hoje, quem cuida do seu marketing?</label>
-            <select id="hoje" name="hoje">
-              <option>Ainda ninguém cuida</option>
-              <option>Eu mesmo, por conta própria</option>
-              <option>Alguém da minha equipe</option>
-              <option>Uma agência ou profissional contratado</option>
-            </select>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>O que você precisa</legend>
           <div class="field">
-            <span class="field__label" id="lbl-servicos">Serviços de interesse</span>
-            <div class="chips" role="group" aria-labelledby="lbl-servicos">
-              <label class="chip"><input type="checkbox" name="interesse" value="Gestão de tráfego"><span>Gestão de tráfego</span></label>
-              <label class="chip"><input type="checkbox" name="interesse" value="Social media"><span>Social media</span></label>
-              <label class="chip"><input type="checkbox" name="interesse" value="Filmmaker"><span>Filmmaker</span></label>
-              <label class="chip"><input type="checkbox" name="interesse" value="Site"><span>Site</span></label>
-              <label class="chip"><input type="checkbox" name="interesse" value="Software sob medida"><span>Software sob medida</span></label>
-              <label class="chip"><input type="checkbox" name="interesse" value="Gestão integrada"><span>Gestão integrada</span></label>
-            </div>
+            <label for="fone">Telefone <em>*</em></label>
+            <input id="fone" name="fone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000">
           </div>
-          <div class="frow">
-            <div class="field"><label for="dificuldade">Maior dificuldade hoje</label>
-              <select id="dificuldade" name="dificuldade">
-                <option>Não sei por onde começar</option>
-                <option>Não consigo manter frequência nas redes</option>
-                <option>Invisto em anúncio e não sei se dá retorno</option>
-                <option>Meu site não converte ou está desatualizado</option>
-                <option>Falta processo e organização na operação</option>
-                <option>Já faço marketing, mas quero melhorar os resultados</option>
-              </select>
-            </div>
-            <div class="field"><label for="verba">Investimento mensal previsto</label>
-              <select id="verba" name="verba">
-                <option>Ainda não defini</option>
-                <option>Até R$ 1.000</option>
-                <option>R$ 1.000 a R$ 3.000</option>
-                <option>R$ 3.000 a R$ 7.000</option>
-                <option>Acima de R$ 7.000</option>
-              </select>
-            </div>
+          <div class="field">
+            <label for="instagram">Instagram <em>*</em></label>
+            <input id="instagram" name="instagram" required placeholder="@suaempresa">
           </div>
-          <div class="field"><label for="prazo">Quando pretende começar</label>
-            <select id="prazo" name="prazo">
-              <option>O quanto antes</option>
-              <option>Nos próximos 30 dias</option>
-              <option>Nos próximos 3 meses</option>
-              <option>Só estou pesquisando</option>
+          <div class="field field--sm-full">
+            <label for="segmento">Segmento <em>*</em></label>
+            <input id="segmento" name="segmento" required placeholder="O que você vende">
+          </div>
+          <div class="field field--sm-full">
+            <label for="interesse">Interesse</label>
+            <select id="interesse" name="interesse">
+              <option selected>Gestão integrada</option>
+              <option>Gestão de tráfego</option>
+              <option>Social media</option>
+              <option>Filmmaker</option>
+              <option>Site</option>
+              <option>Software sob medida</option>
             </select>
           </div>
-          <div class="field"><label for="msg">Conte um pouco do seu momento</label><textarea id="msg" name="msg" placeholder="O que a sua empresa faz e o que você precisa resolver agora"></textarea></div>
-        </fieldset>
+          <div class="field field--full">
+            <label for="verba">Investimento mensal previsto</label>
+            <select id="verba" name="verba">
+              <option>Ainda não defini</option>
+              <option>Até R$ 1.000</option>
+              <option>R$ 1.000 a R$ 3.000</option>
+              <option>R$ 3.000 a R$ 7.000</option>
+              <option>Acima de R$ 7.000</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="msg">O que você precisa resolver</label>
+            <textarea id="msg" name="msg" placeholder="Conte em poucas linhas o momento da sua empresa"></textarea>
+          </div>
+        </div>
 
         <label class="consent">
           <input type="checkbox" id="lgpd" name="lgpd" required>
-          <span>Autorizo a DMK a usar os dados acima para entrar em contato sobre este diagnóstico.</span>
+          <span>Autorizo a DMK a usar os dados acima para entrar em contato.</span>
         </label>
 
         <button class="btn btn--gold btn--block" type="submit" id="send"><span>Enviar formulário</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h13M12 5l7 7-7 7"/></svg></button>
@@ -472,26 +447,23 @@
 <footer class="foot">
   <div class="wrap">
     <div class="foot__top">
-      <div>
+      <div class="foot__brand">
         <a class="logo" href="#top" aria-label="DMK Marketing Estratégico"><svg viewBox="0 0 523 223"><use href="#dmk"/></svg></a>
-        <p>Estratégia digital completa para a sua empresa. Redes sociais, site e tráfego com gestão integrada.</p>
+        <p>Redes sociais, site e tráfego com gestão integrada.</p>
       </div>
-      <div>
-        <h5>Serviços</h5>
-        <ul>
-          <li><a href="#s-trafego">Gestão de tráfego pago</a></li>
-          <li><a href="#s-social">Social media</a></li>
-          <li><a href="#s-video">Filmmaker e audiovisual</a></li>
-          <li><a href="#s-dev">Sites e softwares sob medida</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Contato</h5>
-        <ul>
-          <li><a href="#contato">Formulário de diagnóstico</a></li>
-          <li><a href="https://www.instagram.com/dmkmarketingestrategico/" target="_blank" rel="noopener">@dmkmarketingestrategico</a></li>
-          <li><span>Nova Santa Rosa · PR</span></li>
-        </ul>
+      <nav class="foot__grid" aria-label="Mapa do site">
+        <a href="#s-trafego">Tráfego pago</a>
+        <a href="#s-social">Social media</a>
+        <a href="#s-video">Filmmaker</a>
+        <a href="#s-dev">Sites e softwares</a>
+        <a href="#metodo">Método</a>
+        <a href="#sobre">Quem faz</a>
+        <a href="#faq">Dúvidas</a>
+        <a href="#contato">Formulário</a>
+      </nav>
+      <div class="foot__meta">
+        <a class="link" href="https://www.instagram.com/dmkmarketingestrategico/" target="_blank" rel="noopener">@dmkmarketingestrategico <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
+        <span>Nova Santa Rosa · PR</span>
       </div>
     </div>
     <div class="foot__bar">

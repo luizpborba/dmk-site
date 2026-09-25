@@ -81,17 +81,13 @@ const send = document.getElementById('send');
 const done = document.getElementById('done');
 
 const CAMPOS = [
-  ['nome', 'Nome'], ['cargo', 'Cargo'], ['email', 'E-mail'], ['fone', 'Telefone'],
-  ['segmento', 'Segmento'], ['instagram', 'Instagram'], ['hoje', 'Quem cuida hoje'],
-  ['dificuldade', 'Maior dificuldade'], ['verba', 'Investimento previsto'],
-  ['prazo', 'Quando começar'], ['msg', 'Momento']
+  ['nome', 'Nome'], ['email', 'E-mail'], ['fone', 'Telefone'], ['instagram', 'Instagram'],
+  ['segmento', 'Segmento'], ['interesse', 'Interesse'], ['verba', 'Investimento previsto'],
+  ['msg', 'Precisa resolver']
 ];
 
 function resumo(d) {
-  const linhas = CAMPOS.map(([k, r]) => `${r}: ${d.get(k) || '-'}`);
-  const interesses = d.getAll('interesse');
-  linhas.splice(7, 0, `Interesse: ${interesses.length ? interesses.join(', ') : '-'}`);
-  return linhas.join('\n');
+  return CAMPOS.map(([k, r]) => `${r}: ${d.get(k) || '-'}`).join('\n');
 }
 
 function sucesso(texto) {
@@ -108,7 +104,6 @@ form.addEventListener('submit', async ev => {
 
   const d = new FormData(form);
   d.delete('website');
-  d.set('interesse', d.getAll('interesse').join(', ') || '-');
   d.set('_subject', `Novo diagnóstico pelo site: ${d.get('instagram') || d.get('nome')}`);
 
   send.disabled = true;
