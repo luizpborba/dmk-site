@@ -130,5 +130,19 @@ faixa de serviços em rolagem contínua (pausa no hover). Tudo desliga com
   aparece esticada ou cortada fora de hora.
 
 ## Publicação
-É estático: sobe em Netlify (arrastando a pasta), Vercel, Cloudflare Pages, GitHub Pages
-ou FTP comum. Depois de publicar, confirme o envio do formulário uma vez.
+
+No ar em **https://luizpborba.github.io/dmk-site/** (GitHub Pages, branch `main`, raiz).
+
+Para atualizar, basta commitar e enviar:
+
+```bash
+git add -A && git commit -m "ajuste" && git push
+```
+
+O Pages reconstrói sozinho em cerca de um minuto.
+
+Para um domínio próprio (por exemplo `dmkmarketing.com.br`), crie um arquivo `CNAME` na
+raiz com o domínio, aponte o DNS para o GitHub Pages e ative HTTPS nas configurações do
+repositório. O site também roda igual em Netlify, Vercel, Cloudflare Pages ou FTP comum.
+
+Depois de publicar, confirme o envio do formulário uma vez.
