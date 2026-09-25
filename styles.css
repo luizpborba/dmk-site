@@ -392,6 +392,7 @@ ul{margin:0;padding:0;list-style:none}
   .drawer__foot{margin-top:20px;font-size:.78rem}
 
   .hero{padding-top:84px}
+  .hero h1{text-align:center}   /* só o título do topo fica centralizado no celular */
   .hero__grid,.detail,.about,.shead,.values{grid-template-columns:1fr}
   .foot__top{grid-template-columns:1fr 1fr;gap:28px}
   .foot__meta{justify-items:start;text-align:left;grid-column:1 / -1;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
