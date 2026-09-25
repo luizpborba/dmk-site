@@ -76,7 +76,6 @@
         <img class="stage__photo" src="assets/micheli-hero.webp" alt="Micheli Schiwe, fundadora da DMK Marketing Estratégico" width="811" height="1190" fetchpriority="high">
         <span class="stage__tag stage__tag--1"><b></b> Gestão integrada</span>
         <span class="stage__tag stage__tag--2">Tráfego · Conteúdo · Vídeo · Tech</span>
-        <span class="stage__tag stage__tag--3"><b></b> Nova Santa Rosa · PR</span>
         <div class="stage__bar"></div>
       </div>
     </div>
@@ -105,7 +104,7 @@
       <div>
         <h2 class="h2">Quatro frentes.<br><em class="it">Uma</em> estratégia só.</h2>
       </div>
-      <div class="shead__aside">
+      <div class="shead__aside hide-sm">
         <p class="lead">A maioria das empresas contrata quatro fornecedores diferentes e nenhum conversa entre si. Aqui, tráfego, conteúdo, vídeo e tecnologia nascem do mesmo plano e puxam o mesmo resultado.</p>
       </div>
     </div>
@@ -224,7 +223,10 @@
       </div>
       <figure class="detail__fig detail__fig--wide">
         <span class="badge">Painel sob medida</span>
-        <img src="assets/ig/mockup-devices.jpg" alt="Sistema de gestão da DMK em um notebook e em um celular" loading="lazy" width="1254" height="809">
+        <picture>
+          <source media="(max-width:900px)" srcset="assets/ig/mockup-mobile.jpg" width="1328" height="992">
+          <img src="assets/ig/mockup-devices.jpg" alt="Sistema de gestão da DMK em um notebook e em um celular" loading="lazy" width="1254" height="809">
+        </picture>
         <figcaption>Do site institucional ao painel de gestão</figcaption>
       </figure>
     </div>
@@ -285,7 +287,7 @@
     <div class="rv d1">
       <h2 class="h2" style="margin:0 0 24px">Marketing estratégico é <em class="it">decisão</em>, não postagem.</h2>
       <p class="lead">A DMK nasceu pra resolver o que mais trava empresa de verdade: falta de direção. Não adianta anunciar sem oferta clara, produzir conteúdo sem objetivo ou ter um site que ninguém atualiza.</p>
-      <p class="lead" style="margin-top:20px">Por isso trabalhamos com gestão integrada: redes sociais, site e tráfego sob o mesmo plano, com leitura de dados e ajuste constante. Você acompanha o que está sendo feito e por quê; a gente executa.</p>
+      <p class="lead hide-sm" style="margin-top:20px">Por isso trabalhamos com gestão integrada: redes sociais, site e tráfego sob o mesmo plano, com leitura de dados e ajuste constante. Você acompanha o que está sendo feito e por quê; a gente executa.</p>
       <blockquote class="pull">A gente não entrega volume de post. Entrega direção, e a execução que vem junto com ela.</blockquote>
       <div class="sign">
         <div>
@@ -305,7 +307,7 @@
       <div>
         <h2 class="h2">Uma equipe.<br>Todas as <em class="it">frentes</em>.</h2>
       </div>
-      <div class="shead__aside">
+      <div class="shead__aside hide-sm">
         <p class="lead">Menos reunião com fornecedor, menos retrabalho, menos culpa jogada de um lado pro outro. Um único ponto de contato respondendo pelo conjunto.</p>
       </div>
     </div>
@@ -367,7 +369,7 @@
       <div class="form__head">
         <div>
           <h3>Formulário de diagnóstico</h3>
-          <p>Leva cerca de um minuto para preencher.</p>
+          <p class="hide-sm">Leva cerca de um minuto para preencher.</p>
         </div>
         <span class="form__step">Sem compromisso</span>
       </div>
@@ -378,24 +380,20 @@
         <fieldset>
           <legend>Sobre você</legend>
           <div class="frow">
-            <div class="field"><label for="nome">Nome completo <em>obrigatório</em></label><input id="nome" name="nome" required autocomplete="name" placeholder="Seu nome"></div>
+            <div class="field"><label for="nome">Nome completo <em>*</em></label><input id="nome" name="nome" required autocomplete="name" placeholder="Seu nome"></div>
             <div class="field"><label for="cargo">Cargo na empresa</label><input id="cargo" name="cargo" autocomplete="organization-title" placeholder="Sócio, gestor, responsável"></div>
           </div>
           <div class="frow">
-            <div class="field"><label for="email">E-mail <em>obrigatório</em></label><input id="email" name="email" type="email" required autocomplete="email" placeholder="voce@empresa.com"></div>
-            <div class="field"><label for="fone">Telefone <em>obrigatório</em></label><input id="fone" name="fone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000"></div>
+            <div class="field"><label for="email">E-mail <em>*</em></label><input id="email" name="email" type="email" required autocomplete="email" placeholder="voce@empresa.com"></div>
+            <div class="field"><label for="fone">Telefone <em>*</em></label><input id="fone" name="fone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000"></div>
           </div>
         </fieldset>
 
         <fieldset>
           <legend>Sobre a empresa</legend>
           <div class="frow">
-            <div class="field"><label for="empresa">Nome da empresa <em>obrigatório</em></label><input id="empresa" name="empresa" required autocomplete="organization" placeholder="Razão social ou nome fantasia"></div>
-            <div class="field"><label for="segmento">Segmento <em>obrigatório</em></label><input id="segmento" name="segmento" required placeholder="O que você vende"></div>
-          </div>
-          <div class="frow">
-            <div class="field"><label for="cidade">Cidade e estado</label><input id="cidade" name="cidade" placeholder="Nova Santa Rosa, PR"></div>
-            <div class="field"><label for="instagram">Instagram ou site</label><input id="instagram" name="instagram" placeholder="@suaempresa"></div>
+            <div class="field"><label for="segmento">Segmento <em>*</em></label><input id="segmento" name="segmento" required placeholder="O que você vende"></div>
+            <div class="field"><label for="instagram">Instagram <em>*</em></label><input id="instagram" name="instagram" required placeholder="@suaempresa"></div>
           </div>
           <div class="field"><label for="hoje">Hoje, quem cuida do seu marketing?</label>
             <select id="hoje" name="hoje">

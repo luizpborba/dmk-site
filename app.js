@@ -82,8 +82,7 @@ const done = document.getElementById('done');
 
 const CAMPOS = [
   ['nome', 'Nome'], ['cargo', 'Cargo'], ['email', 'E-mail'], ['fone', 'Telefone'],
-  ['empresa', 'Empresa'], ['segmento', 'Segmento'], ['cidade', 'Cidade'],
-  ['instagram', 'Instagram ou site'], ['hoje', 'Quem cuida hoje'],
+  ['segmento', 'Segmento'], ['instagram', 'Instagram'], ['hoje', 'Quem cuida hoje'],
   ['dificuldade', 'Maior dificuldade'], ['verba', 'Investimento previsto'],
   ['prazo', 'Quando começar'], ['msg', 'Momento']
 ];
@@ -91,7 +90,7 @@ const CAMPOS = [
 function resumo(d) {
   const linhas = CAMPOS.map(([k, r]) => `${r}: ${d.get(k) || '-'}`);
   const interesses = d.getAll('interesse');
-  linhas.splice(9, 0, `Interesse: ${interesses.length ? interesses.join(', ') : '-'}`);
+  linhas.splice(7, 0, `Interesse: ${interesses.length ? interesses.join(', ') : '-'}`);
   return linhas.join('\n');
 }
 
@@ -110,7 +109,7 @@ form.addEventListener('submit', async ev => {
   const d = new FormData(form);
   d.delete('website');
   d.set('interesse', d.getAll('interesse').join(', ') || '-');
-  d.set('_subject', `Novo diagnóstico pelo site: ${d.get('empresa') || d.get('nome')}`);
+  d.set('_subject', `Novo diagnóstico pelo site: ${d.get('instagram') || d.get('nome')}`);
 
   send.disabled = true;
   send.querySelector('span').textContent = 'Enviando...';
@@ -131,7 +130,7 @@ form.addEventListener('submit', async ev => {
   }
 
   /* reserva: abre o e-mail do visitante já preenchido */
-  const assunto = encodeURIComponent(`Diagnóstico pelo site: ${d.get('empresa') || d.get('nome')}`);
+  const assunto = encodeURIComponent(`Diagnóstico pelo site: ${d.get('instagram') || d.get('nome')}`);
   const corpo = encodeURIComponent(resumo(new FormData(form)));
   location.href = `mailto:${CONTACT_EMAIL}?subject=${assunto}&body=${corpo}`;
   sucesso('Abrimos o seu programa de e-mail com os dados preenchidos. É só enviar que a DMK responde no mesmo dia.');

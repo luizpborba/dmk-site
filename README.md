@@ -46,11 +46,12 @@ const CONTACT_EMAIL = 'contato@dmkmarketing.com.br';
 Em qualquer caso o visitante vê o painel de confirmação sem sair da página.
 
 ### O que o formulário coleta
-Três blocos numerados: **Sobre você** (nome, cargo, e-mail, telefone), **Sobre a empresa**
-(empresa, segmento, cidade, Instagram ou site, quem cuida do marketing hoje) e
-**O que você precisa** (serviços em chips de múltipla escolha, maior dificuldade,
-investimento previsto, prazo e mensagem livre). Fecha com autorização de contato (LGPD),
-campo-armadilha contra robô e validação nativa do navegador.
+Três blocos: **Sobre você** (nome, cargo, e-mail, telefone), **Sobre a empresa**
+(segmento, Instagram, quem cuida do marketing hoje) e **O que você precisa** (serviços em
+chips de múltipla escolha, maior dificuldade, investimento previsto, prazo e mensagem
+livre). Fecha com autorização de contato (LGPD), campo-armadilha contra robô e validação
+nativa do navegador. No celular tudo vira coluna única, com campo de 16px para o iPhone
+não dar zoom ao focar.
 
 ## 2. Outros ajustes recomendados
 
@@ -122,12 +123,16 @@ faixa de serviços em rolagem contínua (pausa no hover). Tudo desliga com
 - Acima de 1080px: layout completo em duas colunas, serviços em linha única.
 - Até 1080px: método em duas colunas, blocos de valor empilhados, linha de serviço com a
   seta ao lado do título.
-- Até 900px: barra branca sólida com logo e botão de menu de 44px; o menu abre em tela
-  cheia com itens grandes, botão dourado e contato no rodapé.
-- Até 620px: tudo em coluna única, formulário empilhado, balões menores no hero.
-- Verificado a 360, 390, 768 e ~1070px: sem rolagem horizontal, sem elemento cortado e
-  sem sobreposição. As imagens usam `height:auto` com `aspect-ratio`, então nenhuma
-  aparece esticada ou cortada fora de hora.
+- Até 900px: **logo centralizada e botão de menu à direita**, barra branca sólida, menu em
+  tela cheia enxuto (itens de 1,15rem, seta discreta, botão dourado de largura total).
+- Até 700px: tudo em coluna única, tipografia reduzida, blocos de apoio marcados com
+  `hide-sm` saem de cena para o celular ficar com menos texto, perguntas do FAQ menores
+  com o sinal alinhado à primeira linha, e o formulário com campo de 16px, rótulo curto e
+  asterisco dourado no lugar da palavra "obrigatório".
+- A imagem do painel troca de arquivo no celular (`mockup-mobile.jpg`), um recorte mais
+  fechado para a interface continuar legível em vez de achatar.
+- Verificado a 360, 375, 390, 768 e ~1010px: sem rolagem horizontal, sem elemento cortado
+  e sem sobreposição. As imagens usam `height:auto` com `aspect-ratio`.
 
 ## Publicação
 
