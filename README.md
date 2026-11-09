@@ -10,8 +10,10 @@ dmk-site/
 ├── app.js                        # menu, reveal e o envio do formulário
 ├── assets/
 │   ├── dmk-logo.svg              # logo original
-│   ├── micheli-hero.webp         # foto 1 recortada (fundo transparente)
-│   ├── micheli-sobre.webp        # foto 2 recortada (fundo transparente)
+│   ├── dmk-casal-hero.webp       # foto do topo, braços cruzados (fundo transparente, tratada no ChatGPT)
+│   ├── dmk-casal-sobre.webp      # foto da seção Sobre, olhando o celular (fundo transparente)
+│   ├── micheli-hero.webp         # foto antiga do topo (ainda usada no og:image)
+│   ├── micheli-sobre.webp        # foto antiga da seção Sobre (sem uso)
 │   └── ig/                       # imagens usadas nas seções de serviço
 │       ├── post-3.jpg            # peça sobre presença digital
 │       ├── post-referencia.jpg   # "Seja uma referência ou desapareça" (sem o "//2024")
